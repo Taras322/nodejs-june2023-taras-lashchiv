@@ -48,3 +48,21 @@ fs.writeFile(filePath2, '', err => {
         console.log(`file ${file2} created`)
     }
 });
+
+fs.mkdir(folder3, err => {
+    if (err) {
+        console.error(`error ${err}`)
+    } else {
+        console.log(`${folder3} done`)
+    }
+});
+
+const filePath3 = `${folder3}/${file3}`;
+
+fs.writeFile(filePath3, '', err => {
+    if (err) {
+        console.error(`error file: ${err}`)
+    } else {
+        console.log(`file ${file3} created`)
+    }
+});
